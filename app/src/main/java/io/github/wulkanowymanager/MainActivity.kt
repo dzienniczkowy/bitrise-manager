@@ -8,6 +8,7 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import io.github.wulkanowymanager.data.models.BuildArtifact
 import io.github.wulkanowymanager.ui.theme.WulkanowymanagerTheme
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -17,28 +18,29 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        mainViewModel.loadData()
+
         setContent {
             WulkanowymanagerTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
-                    Greeting("Android")
+                    Greeting(mainViewModel.artifacts.value)
                 }
             }
         }
-
-        mainViewModel.loadData()
     }
 }
 
 @Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+fun Greeting(items: List<BuildArtifact>) {
+    Text(text = "Hello $items!")
 }
 
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
     WulkanowymanagerTheme {
-        Greeting("Android")
+        Greeting(emptyList())
     }
 }
