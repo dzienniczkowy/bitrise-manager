@@ -12,11 +12,16 @@ buildscript {
     }
 }
 
+@Suppress("JcenterRepositoryObsolete")
 allprojects {
     repositories {
         mavenCentral()
         google()
-        jcenter()
+        jcenter {
+            content {
+                includeModule("org.jetbrains.kotlinx", "kotlinx-collections-immutable-jvm")
+            }
+        }
     }
 }
 
