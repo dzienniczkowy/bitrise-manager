@@ -1,4 +1,4 @@
-package io.github.wulkanowymanager
+package io.github.wulkanowymanager.ui.modules
 
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel

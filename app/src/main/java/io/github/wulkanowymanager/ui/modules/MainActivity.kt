@@ -1,4 +1,4 @@
-package io.github.wulkanowymanager
+package io.github.wulkanowymanager.ui.modules
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
