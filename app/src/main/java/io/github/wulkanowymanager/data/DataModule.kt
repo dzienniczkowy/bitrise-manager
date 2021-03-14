@@ -1,21 +1,26 @@
 package io.github.wulkanowymanager.data
 
-import io.github.wulkanowymanager.data.repositories.BuildRepository
+import dagger.Module
+import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import io.ktor.client.*
 import io.ktor.client.engine.cio.*
 import io.ktor.client.features.json.*
 import io.ktor.client.features.json.serializer.*
-import org.koin.dsl.module
+import javax.inject.Singleton
 
-val dataModule = module {
-    single {
-        HttpClient(CIO) {
-            install(JsonFeature) {
-                serializer = KotlinxSerializer(kotlinx.serialization.json.Json {
-                    ignoreUnknownKeys = true
-                })
-            }
+@Module
+@InstallIn(SingletonComponent::class)
+class DataModule {
+
+    @Provides
+    @Singleton
+    fun provideHttpClient() = HttpClient(CIO) {
+        install(JsonFeature) {
+            serializer = KotlinxSerializer(kotlinx.serialization.json.Json {
+                ignoreUnknownKeys = true
+            })
         }
     }
-    single { BuildRepository(get()) }
 }

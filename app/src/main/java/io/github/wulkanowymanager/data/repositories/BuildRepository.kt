@@ -3,8 +3,11 @@ package io.github.wulkanowymanager.data.repositories
 import io.github.wulkanowymanager.data.models.BuildArtifact
 import io.ktor.client.*
 import io.ktor.client.request.*
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class BuildRepository(private val client: HttpClient) {
+@Singleton
+class BuildRepository @Inject constructor(private val client: HttpClient) {
 
     companion object {
         private const val BASE_URL = "https://bitrise-redirector.herokuapp.com"

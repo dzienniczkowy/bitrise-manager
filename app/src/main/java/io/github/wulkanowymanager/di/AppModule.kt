@@ -1,9 +1,9 @@
 package io.github.wulkanowymanager.di
 
-import io.github.wulkanowymanager.ui.modules.MainViewModel
-import org.koin.androidx.viewmodel.dsl.viewModel
-import org.koin.dsl.module
+import dagger.Module
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 
-val appModule = module {
-    viewModel { MainViewModel(get()) }
-}
+@Module
+@InstallIn(SingletonComponent::class)
+abstract class AppModule

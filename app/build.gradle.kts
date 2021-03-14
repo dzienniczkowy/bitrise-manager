@@ -1,7 +1,9 @@
 plugins {
     id("com.android.application")
     kotlin("android")
+    kotlin("kapt")
     id("org.jetbrains.kotlin.plugin.serialization")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -38,6 +40,14 @@ android {
         jvmTarget = "11"
     }
 
+    kapt {
+        correctErrorTypes = true
+    }
+
+    hilt {
+        enableExperimentalClasspathAggregation = true
+    }
+
     buildFeatures {
         compose = true
     }
@@ -51,6 +61,7 @@ val composeVersion = "1.0.0-beta02"
 val ktorVersion = "1.5.2"
 val koinVersion = "3.0.1-beta-1"
 val kotlinVersion: String by rootProject.extra
+val hiltVersion: String by rootProject.extra
 
 dependencies {
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:1.1.5")
@@ -70,8 +81,8 @@ dependencies {
 
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.0")
 
-    implementation("io.insert-koin:koin-core:$koinVersion")
-    implementation("io.insert-koin:koin-android:$koinVersion")
+    implementation("com.google.dagger:hilt-android:$hiltVersion")
+    kapt("com.google.dagger:hilt-compiler:$hiltVersion")
 
     implementation("io.ktor:ktor-client-cio:$ktorVersion")
     implementation("io.ktor:ktor-client-serialization-jvm:$ktorVersion")
