@@ -59,7 +59,6 @@ android {
 
 val composeVersion = "1.0.0-beta02"
 val ktorVersion = "1.5.2"
-val koinVersion = "3.0.1-beta-1"
 val kotlinVersion: String by rootProject.extra
 val hiltVersion: String by rootProject.extra
 
