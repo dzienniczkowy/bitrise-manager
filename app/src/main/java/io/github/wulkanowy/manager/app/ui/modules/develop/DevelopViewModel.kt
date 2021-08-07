@@ -1,4 +1,4 @@
-package io.github.wulkanowy.manager.app.ui.modules
+package io.github.wulkanowy.manager.app.ui.modules.develop
 
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
@@ -10,13 +10,13 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class MainViewModel @Inject constructor(
-    private val buildRepository: BuildRepository
+class DevelopViewModel @Inject constructor(
+    private val buildRepository: BuildRepository,
 ) : ViewModel() {
 
     val artifacts = mutableStateOf<List<BuildArtifact>>(emptyList())
 
-    fun loadData() {
+    init {
         viewModelScope.launch {
             artifacts.value = buildRepository.getLastArtifacts()
         }
