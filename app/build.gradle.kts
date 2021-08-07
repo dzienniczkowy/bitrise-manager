@@ -11,7 +11,7 @@ android {
     buildToolsVersion = "30.0.3"
 
     defaultConfig {
-        applicationId = "io.github.wulkanowymanager"
+        applicationId = "io.github.wulkanowy.manager"
         minSdk = 21
         targetSdk = 30
         versionCode = 1

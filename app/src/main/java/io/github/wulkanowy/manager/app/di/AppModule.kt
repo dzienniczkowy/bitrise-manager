@@ -1,4 +1,4 @@
-package io.github.wulkanowymanager.di
+package io.github.wulkanowy.manager.app.di
 
 import dagger.Module
 import dagger.hilt.InstallIn

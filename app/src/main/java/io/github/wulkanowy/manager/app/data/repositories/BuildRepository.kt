@@ -1,6 +1,6 @@
-package io.github.wulkanowymanager.data.repositories
+package io.github.wulkanowy.manager.app.data.repositories
 
-import io.github.wulkanowymanager.data.models.BuildArtifact
+import io.github.wulkanowy.manager.app.data.models.BuildArtifact
 import io.ktor.client.*
 import io.ktor.client.request.*
 import javax.inject.Inject

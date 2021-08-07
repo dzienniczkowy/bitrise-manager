@@ -1,4 +1,4 @@
-package io.github.wulkanowymanager.ui.modules
+package io.github.wulkanowy.manager.app.ui.modules
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,8 +10,8 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import dagger.hilt.android.AndroidEntryPoint
-import io.github.wulkanowymanager.data.models.BuildArtifact
-import io.github.wulkanowymanager.ui.theme.WulkanowymanagerTheme
+import io.github.wulkanowy.manager.app.data.models.BuildArtifact
+import io.github.wulkanowy.manager.app.ui.theme.WulkanowymanagerTheme
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {

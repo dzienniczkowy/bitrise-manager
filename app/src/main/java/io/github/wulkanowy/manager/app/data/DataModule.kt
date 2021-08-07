@@ -1,4 +1,4 @@
-package io.github.wulkanowymanager.data
+package io.github.wulkanowy.manager.app.data
 
 import dagger.Module
 import dagger.Provides

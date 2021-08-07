@@ -1,4 +1,4 @@
-package io.github.wulkanowymanager.data.models
+package io.github.wulkanowy.manager.app.data.models
 
 import kotlinx.serialization.Serializable
 

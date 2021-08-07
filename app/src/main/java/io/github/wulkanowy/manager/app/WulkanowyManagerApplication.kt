@@ -1,4 +1,4 @@
-package io.github.wulkanowymanager
+package io.github.wulkanowy.manager.app
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

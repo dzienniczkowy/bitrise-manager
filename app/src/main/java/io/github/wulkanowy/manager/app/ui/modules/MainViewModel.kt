@@ -1,11 +1,11 @@
-package io.github.wulkanowymanager.ui.modules
+package io.github.wulkanowy.manager.app.ui.modules
 
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import io.github.wulkanowymanager.data.models.BuildArtifact
-import io.github.wulkanowymanager.data.repositories.BuildRepository
+import io.github.wulkanowy.manager.app.data.models.BuildArtifact
+import io.github.wulkanowy.manager.app.data.repositories.BuildRepository
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 

@@ -1,4 +1,4 @@
-package io.github.wulkanowymanager.ui.theme
+package io.github.wulkanowy.manager.app.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
