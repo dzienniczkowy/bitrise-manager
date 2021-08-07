@@ -10,8 +10,9 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class MainViewModel @Inject constructor(private val buildRepository: BuildRepository) :
-    ViewModel() {
+class MainViewModel @Inject constructor(
+    private val buildRepository: BuildRepository
+) : ViewModel() {
 
     val artifacts = mutableStateOf<List<BuildArtifact>>(emptyList())
 

@@ -1,29 +1,24 @@
 buildscript {
-    val kotlinVersion by extra("1.4.30")
-    val hiltVersion by extra("2.33-beta")
+    val kotlinVersion by extra("1.5.21")
+    val hiltVersion by extra("2.38.1")
+    val composeVersion by extra("1.0.1")
 
     repositories {
         google()
         mavenCentral()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:7.0.0-alpha11")
+        classpath("com.android.tools.build:gradle:7.0.0")
         classpath(kotlin("gradle-plugin", version = kotlinVersion))
         classpath("org.jetbrains.kotlin:kotlin-serialization:$kotlinVersion")
         classpath("com.google.dagger:hilt-android-gradle-plugin:$hiltVersion")
     }
 }
 
-@Suppress("JcenterRepositoryObsolete")
 allprojects {
     repositories {
-        mavenCentral()
         google()
-        jcenter {
-            content {
-                includeModule("org.jetbrains.kotlinx", "kotlinx-collections-immutable-jvm")
-            }
-        }
+        mavenCentral()
     }
 }
 
