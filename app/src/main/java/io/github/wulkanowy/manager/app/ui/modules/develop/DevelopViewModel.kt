@@ -18,7 +18,7 @@ class DevelopViewModel @Inject constructor(
 
     init {
         viewModelScope.launch {
-            artifacts.value = buildRepository.getLastArtifacts()
+            artifacts.value = buildRepository.getUnstableBuilds()
         }
     }
 }
