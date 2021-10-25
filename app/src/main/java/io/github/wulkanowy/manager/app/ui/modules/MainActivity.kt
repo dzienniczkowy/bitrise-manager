@@ -15,6 +15,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
@@ -29,13 +30,14 @@ import dagger.hilt.android.AndroidEntryPoint
 import io.github.wulkanowy.manager.app.ui.modules.develop.DevelopScreen
 import io.github.wulkanowy.manager.app.ui.modules.stable.StableScreen
 import io.github.wulkanowy.manager.app.ui.modules.unstable.UnstableScreen
-import io.github.wulkanowy.manager.app.ui.theme.WulkanowymanagerTheme
+import io.github.wulkanowy.manager.app.ui.theme.WulkanowyManagerTheme
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        installSplashScreen()
         setContent {
             WulkanowyManagerApp()
         }
@@ -44,7 +46,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun WulkanowyManagerApp() {
-    WulkanowymanagerTheme {
+    WulkanowyManagerTheme {
         val navController = rememberNavController()
 
         Scaffold(bottomBar = { BottomNavigation(navController) }) {

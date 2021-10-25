@@ -63,6 +63,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2")
 
     implementation("androidx.core:core-ktx:1.6.0")
+    implementation("androidx.core:core-splashscreen:1.0.0-alpha02")
     implementation("androidx.appcompat:appcompat:1.3.1")
     implementation("androidx.activity:activity-compose:1.3.1")
     implementation("androidx.navigation:navigation-compose:2.4.0-alpha10")
@@ -70,6 +71,8 @@ dependencies {
     implementation("androidx.compose.ui:ui:$composeVersion")
     implementation("androidx.compose.ui:ui-tooling:$composeVersion")
     implementation("androidx.compose.material:material:$composeVersion")
+
+    implementation("com.google.accompanist:accompanist-systemuicontroller:0.20.0")
 
     implementation("com.google.android.material:material:1.4.0")
 
