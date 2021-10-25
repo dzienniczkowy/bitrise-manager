@@ -7,7 +7,7 @@ plugins {
 }
 
 val composeVersion = "1.0.4"
-val ktorVersion = "1.6.2"
+val ktorVersion = "1.6.4"
 val kotlinVersion: String by rootProject.extra
 val hiltVersion: String by rootProject.extra
 
