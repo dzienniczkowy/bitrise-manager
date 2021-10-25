@@ -72,8 +72,6 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling:$composeVersion")
     implementation("androidx.compose.material:material:$composeVersion")
 
-    implementation("com.google.accompanist:accompanist-systemuicontroller:0.20.0")
-
     implementation("com.google.android.material:material:1.4.0")
 
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
@@ -84,4 +82,9 @@ dependencies {
 
     implementation("io.ktor:ktor-client-cio:$ktorVersion")
     implementation("io.ktor:ktor-client-serialization-jvm:$ktorVersion")
+    implementation("io.ktor:ktor-client-logging:$ktorVersion")
+
+    implementation("com.jakewharton.timber:timber:5.0.1")
+    implementation("com.google.accompanist:accompanist-systemuicontroller:0.20.0")
+
 }
