@@ -6,9 +6,11 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import io.ktor.client.*
 import io.ktor.client.engine.cio.*
+import io.ktor.client.features.*
 import io.ktor.client.features.json.*
 import io.ktor.client.features.json.serializer.*
 import io.ktor.client.features.logging.*
+import io.ktor.http.*
 import kotlinx.serialization.json.Json
 import javax.inject.Singleton
 
@@ -29,5 +31,11 @@ class DataModule {
             serializer = KotlinxSerializer(json)
         }
         install(Logging)
+        defaultRequest {
+            with(url) {
+                protocol = URLProtocol.HTTPS
+                host = "manager.wulkanowy.net.pl"
+            }
+        }
     }
 }

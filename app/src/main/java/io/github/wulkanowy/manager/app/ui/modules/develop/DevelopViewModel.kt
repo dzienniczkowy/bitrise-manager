@@ -4,7 +4,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import io.github.wulkanowy.manager.app.data.models.BuildArtifact
+import io.github.wulkanowy.manager.app.data.models.PullRequestBuild
 import io.github.wulkanowy.manager.app.data.repositories.BuildRepository
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -14,7 +14,7 @@ class DevelopViewModel @Inject constructor(
     private val buildRepository: BuildRepository,
 ) : ViewModel() {
 
-    val artifacts = mutableStateOf<List<BuildArtifact>>(emptyList())
+    val artifacts = mutableStateOf<List<PullRequestBuild>>(emptyList())
 
     init {
         viewModelScope.launch {

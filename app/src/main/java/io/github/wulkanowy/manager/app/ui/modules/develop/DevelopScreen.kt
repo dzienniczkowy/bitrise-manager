@@ -23,8 +23,8 @@ fun DevelopScreen(
     LazyColumn {
         items(artifacts) { item ->
             Row {
-                Text(text = item.number.toString())
-                Text(text = item.title, Modifier.padding(10.dp))
+                Text(text = item.build?.buildNumber.toString())
+                Text(text = item.pullRequest.title, Modifier.padding(10.dp))
             }
         }
     }
