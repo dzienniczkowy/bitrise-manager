@@ -30,7 +30,9 @@ class DataModule {
         install(JsonFeature) {
             serializer = KotlinxSerializer(json)
         }
-        install(Logging)
+        install(Logging) {
+            level = LogLevel.INFO
+        }
         defaultRequest {
             with(url) {
                 protocol = URLProtocol.HTTPS
