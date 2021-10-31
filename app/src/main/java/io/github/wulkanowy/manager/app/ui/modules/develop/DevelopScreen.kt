@@ -25,6 +25,8 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import coil.compose.rememberImagePainter
+import com.google.accompanist.swiperefresh.SwipeRefresh
+import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
 import io.github.wulkanowy.manager.app.data.models.BitriseBuildInfo
 import io.github.wulkanowy.manager.app.data.models.PullRequestBuild
 import io.github.wulkanowy.manager.app.data.models.PullRequestInfo
@@ -36,10 +38,16 @@ fun DevelopScreen(
     viewModel: DevelopViewModel = viewModel()
 ) {
     val artifacts by remember { viewModel.artifacts }
+    val isRefreshing by viewModel.isLoading
 
-    LazyColumn {
-        items(artifacts) {
-            BuildCard(item = it)
+    SwipeRefresh(
+        state = rememberSwipeRefreshState(isRefreshing),
+        onRefresh = { viewModel.loadData() },
+    ) {
+        LazyColumn {
+            items(artifacts) {
+                BuildCard(item = it)
+            }
         }
     }
 }
@@ -48,7 +56,9 @@ fun DevelopScreen(
 fun BuildCard(item: PullRequestBuild) {
     Card(
         elevation = 10.dp,
-        modifier = Modifier.fillMaxWidth().padding(8.dp)
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(8.dp)
     ) {
         Row(modifier = Modifier.padding(10.dp)) {
             Column(modifier = Modifier.weight(1f)) {
