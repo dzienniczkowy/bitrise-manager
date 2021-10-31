@@ -73,6 +73,8 @@ dependencies {
     implementation("androidx.compose.material:material:$composeVersion")
     implementation("androidx.compose.material:material-icons-extended:1.0.4")
     implementation("com.google.accompanist:accompanist-swiperefresh:0.21.0-beta")
+
+
     implementation("io.coil-kt:coil-compose:1.4.0")
 
     implementation("com.google.android.material:material:1.4.0")
@@ -88,6 +90,7 @@ dependencies {
     implementation("io.ktor:ktor-client-logging:$ktorVersion")
 
     implementation("com.jakewharton.timber:timber:5.0.1")
+    implementation("ch.qos.logback:logback-classic:1.2.6")
     implementation("com.google.accompanist:accompanist-systemuicontroller:0.20.0")
 
 }

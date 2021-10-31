@@ -31,6 +31,7 @@ class DataModule {
             serializer = KotlinxSerializer(json)
         }
         install(Logging) {
+            logger = Logger.ANDROID
             level = LogLevel.INFO
         }
         defaultRequest {
