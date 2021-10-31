@@ -23,7 +23,7 @@ fun WulkanowyManagerTheme(
         LightColorPalette
     }
 
-    systemUiController.setSystemBarsColor(Color.White)
+    systemUiController.setSystemBarsColor(PersianRed)
 
     MaterialTheme(
         colors = colors,
