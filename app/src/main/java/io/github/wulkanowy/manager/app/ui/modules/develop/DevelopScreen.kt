@@ -46,14 +46,14 @@ fun DevelopScreen(
     ) {
         LazyColumn {
             items(artifacts) {
-                BuildCard(item = it)
+                ItemCard(item = it)
             }
         }
     }
 }
 
 @Composable
-fun BuildCard(item: PullRequestBuild) {
+fun ItemCard(item: PullRequestBuild) {
     Card(
         elevation = 10.dp,
         modifier = Modifier
@@ -108,8 +108,8 @@ fun BuildCard(item: PullRequestBuild) {
 
 @Preview
 @Composable
-fun BuildCardPreview() {
-    BuildCard(
+fun ItemCardPreview() {
+    ItemCard(
         item = PullRequestBuild(
             pullRequest = PullRequestInfo(
                 id = 755547692,
