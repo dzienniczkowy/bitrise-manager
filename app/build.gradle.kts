@@ -91,6 +91,6 @@ dependencies {
 
     implementation("com.jakewharton.timber:timber:5.0.1")
     implementation("ch.qos.logback:logback-classic:1.2.6")
-    implementation("com.google.accompanist:accompanist-systemuicontroller:0.20.0")
+    implementation("com.google.accompanist:accompanist-systemuicontroller:0.20.2")
 
 }
