@@ -6,8 +6,8 @@ plugins {
     id("dagger.hilt.android.plugin")
 }
 
-val composeVersion = "1.0.4"
-val ktorVersion = "1.6.4"
+val composeVersion = "1.0.5"
+val ktorVersion = "1.6.5"
 val kotlinVersion: String by rootProject.extra
 val hiltVersion: String by rootProject.extra
 
@@ -62,16 +62,16 @@ dependencies {
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2")
 
-    implementation("androidx.core:core-ktx:1.6.0")
+    implementation("androidx.core:core-ktx:1.7.0")
     implementation("androidx.core:core-splashscreen:1.0.0-alpha02")
-    implementation("androidx.appcompat:appcompat:1.3.1")
-    implementation("androidx.activity:activity-compose:1.3.1")
-    implementation("androidx.navigation:navigation-compose:2.4.0-alpha10")
+    implementation("androidx.appcompat:appcompat:1.4.0")
+    implementation("androidx.activity:activity-compose:1.4.0")
+    implementation("androidx.navigation:navigation-compose:2.4.0-beta02")
 
     implementation("androidx.compose.ui:ui:$composeVersion")
     implementation("androidx.compose.ui:ui-tooling:$composeVersion")
     implementation("androidx.compose.material:material:$composeVersion")
-    implementation("androidx.compose.material:material-icons-extended:1.0.4")
+    implementation("androidx.compose.material:material-icons-extended:1.0.5")
     implementation("com.google.accompanist:accompanist-swiperefresh:0.21.0-beta")
 
 
@@ -79,7 +79,7 @@ dependencies {
 
     implementation("com.google.android.material:material:1.4.0")
 
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.4.0")
 
     implementation("com.google.dagger:hilt-android:$hiltVersion")
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0-alpha03")
