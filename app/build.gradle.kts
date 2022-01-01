@@ -90,7 +90,7 @@ dependencies {
     implementation("io.ktor:ktor-client-logging:$ktorVersion")
 
     implementation("com.jakewharton.timber:timber:5.0.1")
-    implementation("ch.qos.logback:logback-classic:1.2.7")
+    implementation("ch.qos.logback:logback-classic:1.2.10")
     implementation("com.google.accompanist:accompanist-systemuicontroller:0.20.2")
 
 }
