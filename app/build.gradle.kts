@@ -6,7 +6,7 @@ plugins {
     id("dagger.hilt.android.plugin")
 }
 
-val composeVersion = "1.0.5"
+val composeVersion = "1.1.1"
 val ktorVersion = "2.0.3"
 val kotlinVersion: String by rootProject.extra
 val hiltVersion: String by rootProject.extra
