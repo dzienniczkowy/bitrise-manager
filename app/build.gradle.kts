@@ -75,7 +75,7 @@ dependencies {
     implementation("com.google.accompanist:accompanist-swiperefresh:0.24.13-rc")
 
 
-    implementation("io.coil-kt:coil-compose:1.4.0")
+    implementation("io.coil-kt:coil-compose:2.1.0")
 
     implementation("com.google.android.material:material:1.4.0")
 
