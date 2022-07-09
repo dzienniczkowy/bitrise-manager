@@ -82,7 +82,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.4.0")
 
     implementation("com.google.dagger:hilt-android:$hiltVersion")
-    implementation("androidx.hilt:hilt-navigation-compose:1.0.0-beta01")
+    implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
     kapt("com.google.dagger:hilt-compiler:$hiltVersion")
 
     implementation("io.ktor:ktor-client-cio:$ktorVersion")
