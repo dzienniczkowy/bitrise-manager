@@ -60,7 +60,7 @@ android {
 dependencies {
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:1.1.5")
 
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.3")
 
     implementation("androidx.core:core-ktx:1.8.0")
     implementation("androidx.core:core-splashscreen:1.0.0-alpha02")
