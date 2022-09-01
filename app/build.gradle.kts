@@ -72,7 +72,7 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling:$composeVersion")
     implementation("androidx.compose.material:material:$composeVersion")
     implementation("androidx.compose.material:material-icons-extended:1.0.5")
-    implementation("com.google.accompanist:accompanist-swiperefresh:0.24.13-rc")
+    implementation("com.google.accompanist:accompanist-swiperefresh:0.26.2-beta")
 
 
     implementation("io.coil-kt:coil-compose:2.1.0")
